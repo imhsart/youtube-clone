@@ -4,28 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>YouTube Clone</title>
 </head>
 <body>
   <div class="video-grid">
     <div class="video-preview">
       <div class="video-thumbnail">
-        <!-- here will be the image and time stamp inside another div with some padding bottom -->
+        <!-- thumbnail image -->
+         <a href="https://youtu.be/xy3AcmW0lrQ?si=cHwzvd1HilqSHS5Z" target="_blank" class="video-link">
+          <div class="thumbnail-holder">
+            <img id="thumbnail-image" src="./thumbnails/thumbnail-1.jpg">
+          </div>
+         </a>
       </div>
       <div class="video-details">
-        <div class="video-profile-section">
-          <!-- here will be the channel profile inside another div -->
+        <div class="channel-profile">
+          <!-- channel profile image-->
+            <a href="https://www.youtube.com/@djomusic887" target="_blank" class="video-link">
+              <img id="channel-profile-image" src="./channel-profile/channel-profile-1.jpg">
+            </a>
         </div>
         <div class="detail-section">
           <div class="detail-section-title">
-            <!-- here will be the title of video -->
+            <!-- video title -->
+             <h3>
+              <a href="https://youtu.be/xy3AcmW0lrQ?si=cHwzvd1HilqSHS5Z" target="_blank" class="video-link">
+                <span class="video-title">
+                  Djo - End of Beginning (Official Audio)
+                </span>
+              </a>
+             </h3>
           </div>
           <div class="detail-section-channel">
             <div class="channel-name">
-              <!-- here will be the channel title-->
+              <!-- channel name-->
+              <span class="detail-span">
+                <a href="https://www.youtube.com/@djomusic887" class="video-link" target="_blank">
+                  Djo Music 
+                </a>
+              </span>
+              <svg 
+                     xmlns="http://www.w3.org/2000/svg" 
+                     viewBox="0 0 24 24" 
+                     width="12" 
+                     height="12" 
+                     fill="rgb(184, 182, 182)">
+                    <path d="M 9.03 2.242 L 8.272 3 H 7.2 A 4.2 4.2 0 0 0 3 7.2 v 1.072 l -0.758 0.758 a 4.2 4.2 0 0 0 0 5.94 l 0.758 0.758 V 16.8 A 4.2 4.2 0 0 0 7.2 21 h 1.072 l 0.758 0.758 a 4.2 4.2 0 0 0 5.94 0 l 0.758 -0.758 H 16.8 a 4.2 4.2 0 0 0 4.2 -4.2 v -1.072 l 0.758 -0.758 a 4.2 4.2 0 0 0 0 -5.94 L 21 8.272 V 7.2 A 4.2 4.2 0 0 0 16.8 3 h -1.072 l -0.758 -0.758 a 4.2 4.2 0 0 0 -5.94 0 Z m 7.73 6.638 a 0.5 0.5 0 0 1 0.241 0.427 v 1.743 a 0.256 0.256 0 0 1 -0.386 0.219 L 14.001 9.7 v 4.55 a 2.75 2.75 0 1 1 -2 -2.646 V 6.888 a 0.5 0.5 0 0 1 0.759 -0.428 l 4 2.42 Z"/>
+                  </svg>
               </div>
             <div class="video-view-stats">
-              <!-- here will be the channel views and years details-->
+              <!-- video stats-->
+              <span class="detail-span">124m views</span>
+              <span class="detail-span">&#183;</span>
+              <span class="detail-span">3 years ago</span>
               </div>
           </div>
         </div>
