@@ -14,10 +14,11 @@ body{
   width: 420px; /*for now fixed width*/
   display: flex;
   flex-direction: column;
+  border-radius: 12px;
 }
 .video-preview:hover{
   background-color: rgb(83, 80, 80);
-  border-radius: 15px;
+  border-radius: 12px;
   transition: ease-in-out 0.3s;
 }
 .video-thumbnail{
@@ -31,7 +32,7 @@ body{
 #thumbnail-image{
   width: 400px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 12px;
 }
 .video-link{
   text-decoration: none;
@@ -54,11 +55,11 @@ body{
 .detail-section{
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 5px;
 }
-.detail-section-title{
-  /* might need later for the menu button */
-}
+/* .detail-section-title{
+     might need later for the menu button
+} */
 .video-title{
   line-height: 22px;
   font-weight: 500;
@@ -67,6 +68,7 @@ body{
   -webkit-line-clamp: 2;
   line-clamp: 2;
   overflow: hidden;
+  font-size: 17px;
 }
 .detail-section-channel{
   display: flex;
