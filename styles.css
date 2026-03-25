@@ -13,8 +13,8 @@ body{
   background-color: grey;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between;
-  align-items: center; */
+  justify-content: space-between;
+  /* align-items: center; */
   padding-inline: 1rem;
 }
 .header-left{
@@ -24,7 +24,8 @@ body{
 .header-center{
   background-color: rgb(217, 94, 141);
   flex: 1;
-  margin-inline: 20px;
+  margin-inline: 30px;
+  max-width: 500px;
 }
 .header-right{
   background-color: rgb(228, 228, 70);
