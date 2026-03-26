@@ -10,7 +10,7 @@ body{
 }
 .header-container{
   height: 55px;
-  background-color: #181818;
+  background-color: grey;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
