@@ -10,9 +10,8 @@ body{
 }
 .header-container{
   height: 55px;
-  background-color: grey;
+  background-color: grey;/*#0f0f0f*/
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-inline: 1rem;
@@ -23,7 +22,6 @@ body{
 .header-left-content{
   display: flex;
   height: 100%;
-  flex-direction: row;
   column-gap: 16px;
   align-items: center;
 }
@@ -43,12 +41,78 @@ body{
 .header-logo{
   cursor: pointer;
 }
+
 .header-center{
-  background-color: rgb(217, 94, 141);
+  background-color: #0f0f0f; /*might need to remove and make it transparent*/
   flex: 1;
-  margin-inline-start: 40px;
-  max-width: 500px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 690px;
+  column-gap: 15px;
 }
+.search-bar{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.search-input{
+  height: 40px;
+  margin-inline-start: 40px;
+  border-radius: 40px 0 0 40px;
+  background-color: #181818;
+  display: flex;
+  flex:1;
+  padding-inline-start: 1rem;
+  justify-content: center;
+  border: 1px solid rgb(48,48,48);
+  align-items: center;
+}
+#search-bar-input{
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+.search-input:focus-within{
+    border: 1px solid rgb(45, 131, 211); 
+}
+.header-buttons{
+  background-color: hsla(0,0%,100%,.08);
+  border: none;
+  height: 40px;
+  cursor: pointer;
+}
+#text-search-button{
+  width: 65px;
+  border-radius: 0 40px 40px 0;
+  border: 1px solid rgb(48,48,48);
+  display: flex;
+  border-left: 0;
+  justify-content: center;
+  align-items: center;
+}
+#text-search-button > svg{
+  width: 70%;
+  height: 70%;
+}
+#sound-search-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sound-search-button:hover{
+  background-color: rgb(70, 69, 69);
+  transition: 0.3s;
+}
+
+
+
 .header-right{
   background-color: rgb(228, 228, 70);
   width: 200px;
@@ -100,8 +164,7 @@ body{
 }
 .video-details{
   display: flex;
-  flex-direction: row;
-  column-gap: 12px;  /*adjust this*/
+  column-gap: 12px;
 }
 .channel-profile{
   display: flex;
@@ -140,7 +203,6 @@ body{
 }
 .channel-name{
   display: flex;
-  flex-direction: row;
   align-items: center;
   column-gap: 5px;
 }
@@ -152,7 +214,6 @@ body{
 }
 .video-view-stats{
   display: flex;
-  flex-direction: row;
   column-gap: 5px;
   align-items: center;
 }
