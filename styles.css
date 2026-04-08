@@ -8,6 +8,7 @@
 body{
   background-color: #0f0f0f;
   padding-block-start: 45px;
+  padding-inline-start: 66px;
 }
 
 /* navbar css starts here */
@@ -173,6 +174,7 @@ body{
   width: 40px;
 }
 .notification-icon{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,6 +182,23 @@ body{
 .header-notification:hover{
   background-color: rgb(70, 69, 69);
   transition: 0.3s;
+  .notification-icon-pings{
+    background-color: rgb(231, 46, 46);
+  }
+}
+.notification-icon-pings{
+  position: absolute;
+  top:-4px;
+  right:-7px;
+  background-color: rgb(200, 0, 0);
+  padding: 0 4px;
+  display: flex;
+  border: 2px solid rgb(59, 9, 9);
+  align-items: center;
+  border-radius: 10px;
+}
+.notification-icon-pings > span{
+  font-size: 14px;
 }
 .user-channel-icon{
   margin-inline: 12px 20px;
@@ -250,7 +269,6 @@ body{
 /* main content grid */
 
 .video-grid{
-  margin-inline-start: 66px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px,1fr));
   gap:15px;
@@ -276,6 +294,7 @@ body{
 }
 .video-thumbnail{
   margin-block-end: 8px;
+  position: relative;
 }
 .thumbnail-holder{
   display: flex;
@@ -289,6 +308,35 @@ body{
 }
 .video-link{
   text-decoration: none;
+}
+.video-length-section{
+  position: absolute;
+  bottom: 10px;
+  right:10px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 4px;
+  padding: 1px 4px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}
+.video-length-icon{
+  display: flex;
+  margin-inline-end: 4px;
+  align-items: center;
+}
+.video-length-icon > svg{
+  width: 12px;
+  height: 12px;
+}
+.video-length{
+  display: flex;
+  align-items: center;
+}
+.video-length > span{
+  font-family: Roboto, "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
 .video-details{
   display: flex;
@@ -339,6 +387,9 @@ body{
 }
 .detail-span > a:hover{
   color: white;
+}
+.channel-name-icon path{
+  color: rgb(184, 182, 182);
 }
 .video-view-stats{
   display: flex;
