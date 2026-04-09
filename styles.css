@@ -49,7 +49,7 @@ body{
 }
 .header-hamburger:hover{
   border-radius: 50%;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.1s;
   background-color: rgb(83, 80, 80);
 }
 .header-logo{
@@ -57,11 +57,28 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.header-logo:hover .header-logo-tooltip{
+  opacity: 1;
+  transition:step-end 0.7s;
 }
 .youtube-logo{
   width: 94px;
   object-fit: cover;
   margin-inline-start: 16px;
+}
+.header-logo-tooltip{
+  position: absolute;
+  background-color: rgb(33, 31, 31);
+  font-size: 12px;
+  padding: 4px 8px;
+  color: rgb(184, 182, 182);
+  border: 2px solid rgb(187, 185, 185);
+  bottom:-30px;
+  right:-40px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* header mid part */
@@ -104,6 +121,25 @@ body{
 .search-input-container:focus-within{
     border: 1px solid rgb(45, 131, 211); 
 }
+.search-button{
+  position: relative;
+}
+.search-button:hover .search-button-tooltip{
+  opacity: 1;
+  transition:step-end 0.7s;
+}
+.search-button-tooltip{
+  position: absolute;
+  background-color: rgb(33, 31, 31);
+  font-size: 12px;
+  padding: 4px 8px;
+  color: rgb(184, 182, 182);
+  border: 2px solid rgb(187, 185, 185);
+  bottom:-20px;
+  right:-30px;
+  opacity: 0;
+  pointer-events: none;
+}
 .header-buttons{
   background-color: hsla(0,0%,100%,.08);
   border: none;
@@ -125,6 +161,9 @@ body{
 }
 .search-voice{
   margin-inline-start: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 #sound-search-button{
   width: 40px;
@@ -136,7 +175,23 @@ body{
 }
 #sound-search-button:hover{
   background-color: rgb(70, 69, 69);
-  transition: 0.3s;
+  transition: 0.1s;
+}
+.search-voice-tooltip, .header-notification-tooltip{
+  position: absolute;
+  background-color: rgba(95, 95, 95,0.8);
+  border-radius: 4px;
+  padding: 10px 8px;
+  color:rgb(240, 240, 240);
+  white-space: nowrap;
+  font-size: 12px;
+  bottom:-50px;
+  pointer-events: none;
+  opacity: 0;
+}
+.search-voice:hover .search-voice-tooltip, .header-notification:hover .header-notification-tooltip{
+  opacity: 1;
+  transition: 0.2s;
 }
 
 /* header right part */
@@ -155,17 +210,18 @@ body{
   cursor: pointer;
   column-gap: 5px;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 15px;
   padding-block: 5px;
   padding-inline: 10px 15px;
   margin-inline-end: 8px;
 }
 .header-right-create:hover{
   background-color: rgb(70, 69, 69);
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .header-notification{
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   margin-inline-end: 8px;
@@ -181,7 +237,7 @@ body{
 }
 .header-notification:hover{
   background-color: rgb(70, 69, 69);
-  transition: 0.3s;
+  transition: 0.1s;
   .notification-icon-pings{
     background-color: rgb(231, 46, 46);
   }
@@ -230,6 +286,7 @@ body{
   padding:0 4px;
   display: flex;
   align-items: start;
+  z-index: 99;
   justify-content: center;
 }
 .sidebar{
@@ -246,7 +303,40 @@ body{
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
 }
+.sidebar-icons:hover .sidebar-icon-tooltip{
+  opacity: 1;
+  transition: step-end 0.7s;
+}
+.sidebar-icon-tooltip{
+  position: absolute;
+  background-color: rgb(33, 31, 31);
+  font-size: 12px;
+  padding: 4px 8px;
+  color: rgb(184, 182, 182);
+  border: 2px solid rgb(187, 185, 185);
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.tooltip-home{
+  bottom:5px;
+  right: -40px;
+}
+.tooltip-shorts{
+  bottom: 5px;
+  right:-43px;
+}
+.tooltip-subscriptions{
+  right:-90px;
+  bottom:5px;
+}
+.tooltip-you{
+  bottom:5px;
+  right: -25px;
+}
+
 .sidebar-icons:hover{
   background-color: rgb(40, 40, 40);
   border-radius: 10px;
