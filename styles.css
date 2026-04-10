@@ -29,7 +29,6 @@ body{
   z-index:100;
   border-block-end: 1px solid rgb(30, 30, 30);
 }
-
 /* left part of header */
 .header-left{
   height: 100%;
@@ -51,7 +50,7 @@ body{
 .header-hamburger:hover{
   border-radius: 50%;
   transition: ease-in-out 0.1s;
-  background-color: rgb(83, 80, 80);
+  background-color: rgba(100, 100, 100, 0.3);
 }
 /* logo of header */
 .header-logo{
@@ -60,6 +59,9 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.header-logo > a{
+  text-decoration: none;
 }
 .header-logo:hover .header-logo-tooltip{
   opacity: 1;
@@ -105,7 +107,7 @@ body{
   flex:1;
   height: 40px;
   padding: 0 4px 0 16px;
-  margin-inline-start: 38px;
+  margin-inline-start: 32px;
   cursor: text;
   justify-content: center;
   border: 1px solid rgb(48,48,48);
@@ -118,6 +120,13 @@ body{
   background-color: transparent;
   font-size: 1rem;
   outline: none;
+}
+/* to block the search inputs close button's space */
+#search-bar-input::-webkit-search-cancel-button {
+  display: none;
+}
+#search-bar-input::not(:placeholder-shown)::-webkit-search-cancel-button {
+  display: block;
 }
 .search-input-container:focus-within{
     border: 1px solid rgb(45, 131, 211); 
@@ -148,6 +157,47 @@ body{
   height: 40px;
   cursor: pointer;
 }
+.responsive-search-button{
+  background-color: transparent;
+  border-radius: 50%;
+  display: none;
+  position: relative;
+}
+.responsive-search-button:hover{
+  background-color: rgba(100, 100, 100, 0.4);
+}
+.responsive-search-button:hover .responsive-search-button-tooltip{
+  opacity: 1;
+  transition: 0.2s;
+}
+#responsive-search-button{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.responsive-search-button-tooltip{
+  position: absolute;
+  background-color: rgba(95, 95, 95,0.8);
+  border-radius: 4px;
+  padding: 10px 8px;
+  color:rgb(240, 240, 240);
+  white-space: nowrap;
+  font-size: 12px;
+  bottom:-50px;
+  border:none;
+  pointer-events: none;
+  opacity: 0;
+}
+#responsive-search-button > svg{
+  width: 70%;
+  height: 70%;
+}
+
 #text-search-button{
   width: 65px;
   border-radius: 0 40px 40px 0;
@@ -176,7 +226,7 @@ body{
   align-items: center;
 }
 #sound-search-button:hover{
-  background-color: rgb(70, 69, 69);
+  background-color: rgba(100, 100, 100,0.3);
   transition: 0.1s;
 }
 /* voice search and notification tooltip */
@@ -217,7 +267,7 @@ body{
   margin-inline-end: 8px;
 }
 .header-right-create:hover{
-  background-color: rgb(70, 69, 69);
+  background-color: rgba(100, 100, 100, 0.3);
   transition: 0.1s;
 }
 .header-notification{
@@ -237,7 +287,7 @@ body{
   align-items: center;
 }
 .header-notification:hover{
-  background-color: rgb(70, 69, 69);
+  background-color: rgba(100, 100, 100, 0.3);
   transition: 0.1s;
   .notification-icon-pings{
     background-color: rgb(231, 46, 46);
@@ -274,7 +324,47 @@ body{
   border-radius: 50%;
 }
 /* media queries for header */
-
+@media screen and (max-width:428px){
+  .header-notification{
+    display: none;
+  }
+  .search-voice{
+    display: none;
+  }
+}
+@media screen and (max-width: 656px){
+  .header-center{
+    justify-content: flex-end;
+    flex:1;
+    flex-basis: 0.000000001px;
+  }
+  .search-bar{
+    display: none;
+    margin:0;
+  }
+  .responsive-search-button{
+    display: block;
+  }
+  .search-voice{
+    margin: 0;
+  }
+  #sound-search-button{
+    background-color: transparent;
+  }
+  .header-right{
+    min-width: 0;
+    flex: none;
+  }
+  .user-channel-icon{
+    margin: 5px;
+  }
+  .header-notification{
+    margin-inline: 0 12px;
+  }
+  .header-right-create{
+    margin-inline-end: 0;
+  }
+}
 /* header close */
 
 /* sidebar start */
@@ -528,7 +618,7 @@ body{
   border-radius: 50%;
 }
 .detail-section-menu:hover{
-  background-color: rgb(70, 69, 69);
+  background-color: rgba(100, 100, 100, 0.3);
 }
 .detail-section-menu-icon{
   display: flex;
