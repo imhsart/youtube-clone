@@ -1,3 +1,4 @@
+/* general css */
 *{
   margin:0;
   padding: 0;
@@ -12,7 +13,7 @@ body{
 }
 
 /* navbar css starts here */
-
+/* header container */
 .header-container{
   height: 55px;
   background-color: rgba(15,15,15,0.7);
@@ -29,10 +30,10 @@ body{
   border-block-end: 1px solid rgb(30, 30, 30);
 }
 
-/* header left part */
-
+/* left part of header */
 .header-left{
   height: 100%;
+  padding-inline-end: 10px;
 }
 .header-left-content{
   display: flex;
@@ -52,6 +53,7 @@ body{
   transition: ease-in-out 0.1s;
   background-color: rgb(83, 80, 80);
 }
+/* logo of header */
 .header-logo{
   cursor: pointer;
   display: flex;
@@ -68,6 +70,7 @@ body{
   object-fit: cover;
   margin-inline-start: 16px;
 }
+/* logo tooltip */
 .header-logo-tooltip{
   position: absolute;
   background-color: rgb(33, 31, 31);
@@ -80,14 +83,12 @@ body{
   opacity: 0;
   pointer-events: none;
 }
-
-/* header mid part */
-
+/* middle part of header */
 .header-center{
   flex: 1;
   display: flex;
   align-items: center;
-  flex: 0 1 730px;
+  flex: 0 1 739px;
   min-width: 0;
 }
 .search-bar{
@@ -128,6 +129,7 @@ body{
   opacity: 1;
   transition:step-end 0.7s;
 }
+/* search button tooltip */
 .search-button-tooltip{
   position: absolute;
   background-color: rgb(33, 31, 31);
@@ -177,6 +179,7 @@ body{
   background-color: rgb(70, 69, 69);
   transition: 0.1s;
 }
+/* voice search and notification tooltip */
 .search-voice-tooltip, .header-notification-tooltip{
   position: absolute;
   background-color: rgba(95, 95, 95,0.8);
@@ -193,9 +196,7 @@ body{
   opacity: 1;
   transition: 0.2s;
 }
-
-/* header right part */
-
+/* right part of the header */
 .header-right{
   height: 100%;
   display: flex;
@@ -210,7 +211,7 @@ body{
   cursor: pointer;
   column-gap: 5px;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 14px;
   padding-block: 5px;
   padding-inline: 10px 15px;
   margin-inline-end: 8px;
@@ -257,7 +258,7 @@ body{
   font-size: 14px;
 }
 .user-channel-icon{
-  margin-inline: 12px 20px;
+  margin-inline: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,11 +273,11 @@ body{
   cursor: pointer;
   border-radius: 50%;
 }
+/* media queries for header */
 
 /* header close */
 
 /* sidebar start */
-
 .sidebar-container{
   background-color: #0f0f0f;
   position: fixed;
@@ -309,6 +310,7 @@ body{
   opacity: 1;
   transition: step-end 0.7s;
 }
+/* sidebar icon tooltips */
 .sidebar-icon-tooltip{
   position: absolute;
   background-color: rgb(33, 31, 31);
@@ -336,36 +338,30 @@ body{
   bottom:5px;
   right: -25px;
 }
-
 .sidebar-icons:hover{
   background-color: rgb(40, 40, 40);
   border-radius: 10px;
   transition: 0.1s;
 }
-.sidebar-icon-span{
-  color:white;
+.sidebar-icon-span > div > svg{
+  color:black;
   margin-block-end: 4px;
 }
 .sidebar-icon-title{
   font-size: 10px;
   font-weight: 500;
 }
-
 /* media queries for sidebar */
-
 
 /* sidebar close */
 
 /* main content grid */
-
 .video-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px,1fr));
   gap:15px;
 }
-
 /* individual video preview containers */
-
 .video-container{
   display: flex;
   justify-content: center;
@@ -378,10 +374,11 @@ body{
   border-radius: 12px;
 }
 .video-preview:hover{
-  background-color: rgb(83, 80, 80);
+  background-color: rgba(83, 80, 80,0.3);
   border-radius: 12px;
   transition: ease-in 0.4s;
 }
+/* thumbnail css */
 .video-thumbnail{
   margin-block-end: 8px;
   position: relative;
@@ -401,8 +398,8 @@ body{
 }
 .video-length-section{
   position: absolute;
-  bottom: 10px;
-  right:10px;
+  bottom: 8px;
+  right:8px;
   background-color: rgba(0,0,0,0.6);
   border-radius: 4px;
   padding: 1px 4px;
@@ -428,9 +425,11 @@ body{
   font-weight: 500;
   font-size: 12px;
 }
+/* video details/titles/channel name */
 .video-details{
   display: flex;
   column-gap: 12px;
+  position: relative;
 }
 .channel-profile{
   display: flex;
@@ -448,9 +447,23 @@ body{
   row-gap: 5px;
   min-width: 0;
 }
-/* .detail-section-title{
-     might need later for the menu button
-} */
+.detail-section-menu{
+  position: absolute;
+  top:-6px;
+  right:-10px;
+  border-radius: 50%;
+}
+.detail-section-menu:hover{
+  background-color: rgb(70, 69, 69);
+}
+.detail-section-menu-icon{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
 .video-title{
   line-height: 22px;
   font-weight: 500;
@@ -458,6 +471,8 @@ body{
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+  text-overflow: ellipsis;
+  padding-inline-end: 24px;
   overflow: hidden;
   font-size: 17px;
 }
@@ -486,3 +501,4 @@ body{
   column-gap: 5px;
   align-items: center;
 }
+/* main content grid end */
