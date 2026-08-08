@@ -6,34 +6,34 @@ It focuses on building a fully responsive layout with a structured header, sideb
 
 ---
 
-## 🚀 What this includes
+## 🌐 Live Demo
 
-- Fully **Responsive Layout** (mobile, tablet, desktop)
-- Responsive **Header** and **Sidebar**
-  - adapts visibility/size based on screen width
-  - uses CSS flexbox for proper layouts 
-- **Video Grid Layout**
-  - clean alignment, spacing and margins
-  - fully responsive across screen sizes
-- **Interactive video cards**
-- Smooth **Hover** effects on video previews and other elements
-- Helpful **Tooltips** on buttons, logo and links
-- Clean, **Structured** layout
-- Use of **Media** queries for handling different screen sizes
-- Use of **SVG** icons instead of images for professional look
-- Use of **Google Fonts** to give that original font
+[View Live Demo](https://youtube-clone-53dr8jn9l-nitin-rana-s-projects.vercel.app)
 
 ---
 
-## 🧠 What I learned
+## 🚀 Features
 
-- Building complex layouts using **Flexbox** and **Grid** together
-- Using **Media Queries** effectively for responsiveness similar to real platforms
-- Structuring UI with layout nesting
-- Handling spacing (margins, padding) properly
-- Enhancing UX using:
-  - pseudo-class selectors
-- Using SVGs for scalable and clean icons
+- Fully **responsive layout** for mobile, tablet, and desktop
+- Responsive **header and sidebar** that adapt to different screen sizes
+- Responsive **video grid** with clean alignment and spacing
+- **Interactive video cards** with smooth hover effects
+- Helpful **tooltips** for buttons, logo, and links
+- **SVG icons** for scalable and clean visuals
+- **Google Fonts** for a YouTube-inspired typography
+- CSS **Flexbox and Grid** for structured layouts
+- **Media queries** for responsive design across screen sizes
+
+--- 
+
+## ▶️ Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+2. Open `index.html` in your browser.
 
 ---
 
