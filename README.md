@@ -33,7 +33,9 @@ It focuses on building a fully responsive layout with a structured header, sideb
 ```bash
 git clone <repository-url>
 ```
-2. Open `index.html` in your browser.
+2. Open the project folder in **VS Code**.
+3. Install the **Live Server** extension.
+4. Right-click `index.html` and select **Open with Live Server**.
 
 ---
 
